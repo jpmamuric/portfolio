@@ -6,7 +6,7 @@ import ResumeNavComponent from '../navbars/resumenavbar/ResumeNavComponent'
 import './animation.css';
 
 const Resume = () => {
-  if(window.innerWidth <= 400 ){
+  if(window.innerWidth <= 450 ){
     return (
       <div >
         <ResumeNavComponent />

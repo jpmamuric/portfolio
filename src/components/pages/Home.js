@@ -6,7 +6,7 @@ import HomeNavComponent from '../navbars/homenavbar/HomeNavComponent';
 import './animation.css';
 
 const Home = () => {
-  if(window.innerWidth <= 400 ){
+  if(window.innerWidth <= 450 ){
     return (
       <div >
         <HomeNavComponent />
