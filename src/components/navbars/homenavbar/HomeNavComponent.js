@@ -1,13 +1,12 @@
-import React from 'react';
+import React    from 'react';
 import { Link } from 'react-router';
 import MyAppBar from '../MyAppBar';
 
-import Drawer from 'material-ui/Drawer';
+import Drawer   from 'material-ui/Drawer';
 import MenuItem from 'material-ui/MenuItem';
-import Paper from 'material-ui/Paper';
+import Paper    from 'material-ui/Paper';
 
 import './HomeNav.css';
-
 
 class HomeNavComponent extends React.Component {
   constructor (props) {
@@ -38,7 +37,6 @@ class HomeNavComponent extends React.Component {
     this.setState({ time: Time })
   }
 
-
   handleLeftTouchTap() {
     this.setState({ open: !this.state.open})
   };
@@ -61,7 +59,7 @@ class HomeNavComponent extends React.Component {
         yourFortune = 'You will discover an amazing new food';
         break;
       case 5:
-        yourFortune = 'You will get alot of sleep soon';
+        yourFortune = 'You will get a lot of sleep soon';
         break;
       case 6:
         yourFortune = 'Yesterday is history. Tomorrow is a mystery, but today is a gift! that is why we call it the present.';
@@ -69,7 +67,6 @@ class HomeNavComponent extends React.Component {
       default:
         yourFortune = 'What is your fotune today?'
     }
-
 
     this.setState({ fortune: yourFortune });
   }
@@ -83,7 +80,7 @@ class HomeNavComponent extends React.Component {
       <div>
         <MyAppBar
           title={this.state.greeting}
-          style={{backgroundColor: 'rgba(126, 128, 215, 1)' }} onLeftIconButtonTouchTap={()=>this.handleLeftTouchTap()}
+          style={{backgroundColor: 'rgba(94, 184, 204, 1)' }} onLeftIconButtonTouchTap={()=>this.handleLeftTouchTap()}
           iconElementRight={
             <img
               onTouchTap={()=>this.handleImgTouchTap()}

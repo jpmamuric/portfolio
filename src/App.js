@@ -2,40 +2,15 @@ import React from 'react';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import './App.css';
 
-import Header from './components/common/header/Header';
-
-class App extends React.Component {
-  constructor (props) {
-    super(props);
-    this.state = {
-      mobile: window.innerWidth
-    };
-  };
-
-
-  render() {
-    //Mobile
-    if( this.state.mobile <= 400) {
-      return (
-        <MuiThemeProvider>
-          <div className="App">
-            { /*<Header title='Mobile'/> */}
-            {this.props.children}
-          </div>
-        </MuiThemeProvider>
-      );
-    } else {
-      //Desktop
-      return (
-        <MuiThemeProvider>
-          <div className="App">
-            <Header title='Web' src={require('./assets/logo4.png')} alt='jp mamuric'/>
-            {this.props.children}
-          </div>
-        </MuiThemeProvider>
-      );
-    }
-  }
+const App = ({children}) => {
+  return (
+    <MuiThemeProvider>
+      <div className="App">
+        { /*<Header title='Mobile'/> */}
+        {children}
+      </div>
+    </MuiThemeProvider>
+  );
 }
 
 export default App;

@@ -1,0 +1,98 @@
+/**********************************
+Media Queries
+***********************************/
+
+/**********
+Mobile
+***********/
+.homesection-banner-mobile {
+  color: transparent;
+  text-indent:-9999px;
+  background: url('../../../../assets/about2.png') no-repeat fixed;
+  background-size: contain;
+  background-position: center;
+  height: 60vh;
+  margin: 0;
+  margin-bottom: -50px;
+
+}
+
+.homesection-banner-desktop {
+  color: transparent;
+  text-indent:-9999px;
+  background: url('../../../../assets/about2.png') no-repeat fixed;
+  background-size: contain;
+  background-position: center;
+  height: 80vh;
+  margin: 0;
+  margin-bottom: -260px;
+}
+
+@media only screen and (min-width: 580px) {
+  .homesection-banner-mobile {
+    color: transparent;
+    text-indent:-9999px;
+    background: url('../../../../assets/responsive.png') no-repeat fixed;
+    background-size: 50%;
+    background-position: center;
+    height: 80vh;
+    margin: 0;
+    margin-bottom: -180px;
+  }
+
+  .homesection-banner-desktop {
+    color: transparent;
+    text-indent:-9999px;
+    background: url('../../../../assets/responsive.png') no-repeat fixed;
+    background-size: 50%;
+    background-position: center;
+    height: 80vh;
+    margin: 0;
+    margin-bottom: -260px;
+  }
+}
+
+/**********
+Tablet
+***********/
+@media only screen and (min-width: 768px) {
+  .homesection-banner-mobile {
+    color: transparent;
+    text-indent:-9999px;
+    background: url('../../../../assets/responsive.png') no-repeat fixed;
+    background-size: 50%;
+    background-position: center;
+    height: 80vh;
+    margin: 0;
+    margin-bottom: -180px;
+  }
+
+  .homesection-banner-desktop {
+    color: transparent;
+    text-indent:-9999px;
+    background: url('../../../../assets/responsive.png') no-repeat fixed;
+    background-size: 50% ;
+    background-position: center;
+    height: 80vh;
+    margin: 0;
+    margin-bottom: -180px;
+
+  }
+}
+
+/**********
+Desktop
+***********/
+@media only screen and (min-width: 1024px) {
+
+  .homesection-banner-mobile {
+    color: orange;
+    background-size: 50% ;
+  }
+
+  .homesection-banner-desktop {
+    color: transparent;
+    width: 100%;
+    background-size: 50% ;
+  }
+}
