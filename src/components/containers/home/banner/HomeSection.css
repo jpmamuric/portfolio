@@ -23,6 +23,7 @@ Mobile
   position: relative;
 }
 
+/******  POPOVER   *****/
 .popover {
   margin-left: 90px;
   margin-right: 20px;
@@ -32,65 +33,60 @@ Mobile
   font-size: 24px;
 }
 
+/******  LANDING PAGE IMAGE   *****/
 .homesection-banner-mobile {
   background: url('../../../../assets/about2.png') no-repeat ;
   color: transparent;
   text-indent:-9999px;
   background-size: cover;
+  width: 100%;
+  height: 40vh;
+  margin: 0;
+}
 
+.homesection-banner-mobile-blur {
+  background: url('../../../../assets/about2.png') no-repeat ;
+  color: transparent;
+  text-indent:-9999px;
+  background-size: cover;
+  width: 100%;
+  height: 40vh;
+  margin: 0;
+  -webkit-filter: blur(3px);
+  filter: blur(3px);
+}
+
+.homesection-banner-desktop {
+  background: url('../../../../assets/about2.png') no-repeat ;
+  color: transparent;
+  text-indent:-9999px;
+  background-size: cover;
   width: 100%;
   height: 40vh;
   margin: 0;
 
 }
 
-.homesection-banner-desktop {
-  color: transparent;
-  text-indent:-9999px;
-  background: url('../../../../assets/about2.png') no-repeat ;
-  background-size: contain;
-  width: 100%;
-  margin: 0;
-
-}
-
 @media only screen and (min-width: 580px) {
-  .banner-container {
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
 
-    -webkit-flex-direction: row;
-    flex-direction: row;
-  }
-
+/******  POPOVER   *****/
   .popover {
     margin-left: 30px;
-    margin-top: 100px;
+    margin-top: 130px;
   }
 
   .homesection-banner-mobile {
-    color: transparent;
-    text-indent:-9999px;
     background: url('../../../../assets/responsive.png') no-repeat ;
     background-size: 50%;
     background-position: center;
     height: 80vh;
-    margin: 0;
-    margin-bottom: -180px;
   }
 
   .homesection-banner-desktop {
-    color: transparent;
-    text-indent:-9999px;
     background: url('../../../../assets/responsive.png') no-repeat ;
     background-size: 50%;
     background-position: center;
     height: 80vh;
-    margin: 0;
-    margin-bottom: -260px;
   }
 }
 
@@ -99,42 +95,14 @@ Tablet
 ***********/
 @media only screen and (min-width: 768px) {
   .banner-container {
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-
     -webkit-flex-direction: row;
     flex-direction: row;
   }
 
+/******  POPOVER   *****/
   .popover {
     margin-left: 5px;
-    margin-top: 100px
-  }
-
-  .homesection-banner-mobile {
-    color: transparent;
-    text-indent:-9999px;
-    background: url('../../../../assets/responsive.png') no-repeat;
-    background-size: 50%;
-    background-position: center;
-    height: 80vh;
-    margin: 0;
-    margin-bottom: -180px;
-  }
-
-  .homesection-banner-desktop {
-    color: transparent;
-    text-indent:-9999px;
-    background: url('../../../../assets/responsive.png') no-repeat;
-    background-size: 50% ;
-    background-position: center;
-    height: 80vh;
-    margin: 0;
-    margin-bottom: -180px;
-
+    margin-top: 150px
   }
 }
 
@@ -142,30 +110,10 @@ Tablet
 Desktop
 ***********/
 @media only screen and (min-width: 1024px) {
-  .banner-container {
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
 
-    -webkit-flex-direction: row;
-    flex-direction: row;
-  }
-
+/******  POPOVER   *****/
   .popover {
-    margin-left: -330px;
+    margin-left: -130px;
     margin-top: 160px;
-  }
-
-  .homesection-banner-mobile {
-    color: orange;
-    background-size: 50% ;
-  }
-
-  .homesection-banner-desktop {
-    color: transparent;
-    width: 100%;
-    background-size: 50% ;
   }
 }

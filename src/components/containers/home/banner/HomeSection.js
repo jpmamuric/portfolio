@@ -22,14 +22,29 @@ class HomeSection extends React.Component {
 
   handleTouchTap(e){
     e.preventDefault();
-    this.setState({ open: true, anchorEl: e.currentTarget })
+    if (window.innerWidth >= 580 ) {
+        this.setState({ banner: 'homesection-banner-desktop'});
+      } else {
+        this.setState({ banner: 'homesection-banner-mobile-blur'});
+      }
+
+    this.setState({
+      open: true,
+      anchorEl: e.currentTarget
+    });
   }
 
   handleClose(){
-    this.setState({ open: false});
+    if (window.innerWidth >= 768 ) {
+        this.setState({ banner: 'homesection-banner-desktop'});
+      } else {
+        this.setState({ banner: 'homesection-banner-mobile'});
+      }
+    this.setState({ open: false });
   }
 
   render() {
+
     return (
       <article>
         <div className='banner-container'>
@@ -50,7 +65,7 @@ class HomeSection extends React.Component {
           >
          <div
             onTouchTap={this.handleClose.bind(this)}
-            className='popover-message'>Hello! and welcome to my component based system
+            className='popover-message'>Hello! welcome to my component interactive based system.
          </div>
 
         </Popover>

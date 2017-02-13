@@ -6,7 +6,7 @@ import Header           from '../common/header/Header';
 import './animation.css';
 
 const Resume = () => {
-  if(window.innerWidth <= 450 ){
+  if(window.innerWidth <= 768 ){
     return (
       <div >
         <header >

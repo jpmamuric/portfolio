@@ -43,25 +43,11 @@ Tablet
 ***********/
 @media only screen and (min-width: 768px) {
   .Header {
-    -webkit-box-shadow: 0px 1px 10px 0px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 1px 10px 0px rgba(0,0,0,0.75);
-    box-shadow: 0px 1px 10px 0px rgba(0,0,0,0.75);
     background-color: rgba(126, 128, 215, 1);
-    padding-top: 25px;
-    padding-bottom: 25px;
-    display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
-    display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
-    display: -ms-flexbox;      /* TWEENER - IE 10 */
-    display: -webkit-flex;     /* NEW - Chrome */
-    display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
-    justify-content: space-between;
-    align-items: center;
     flex-direction: row;
-    padding: 0;
   }
 
   .header-logo {
-    padding: 10px;
     width: 270px !important;
     margin-left: 50px;
   }
@@ -74,13 +60,6 @@ Tablet
     font-size: 1em;
     padding: 20px;
   }
-
-  .nav-link:link,
-  .nav-link:visited {
-    color: white;
-    text-decoration: none;
-  }
-
 }
 
 /**********
@@ -88,41 +67,15 @@ Desktop
 ***********/
 @media only screen and (min-width: 1024px) {
   .Header {
-    -webkit-box-shadow: 0px 1px 10px 0px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 1px 10px 0px rgba(0,0,0,0.75);
-    box-shadow: 0px 1px 10px 0px rgba(0,0,0,0.75);
     background-color: rgba(94, 184, 204, 1);
-    padding-top: 25px;
-    padding-bottom: 25px;
-    display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
-    display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
-    display: -ms-flexbox;      /* TWEENER - IE 10 */
-    display: -webkit-flex;     /* NEW - Chrome */
-    display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: row;
-    padding: 0;
   }
 
   .header-logo {
     padding: 10px;
-    width: 270px !important;
-    margin-left: 50px;
-  }
-
-  .header-nav{
-    margin-right: 50px
   }
 
   .nav-link {
     font-size: 1.2em;
     padding: 15px;
-  }
-
-  .nav-link:link,
-  .nav-link:visited {
-    color: white;
-    text-decoration: none;
   }
 }
