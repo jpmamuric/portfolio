@@ -5,8 +5,21 @@ Media Queries
 /**********
 Mobile
 ***********/
-.floating-button{
-  z-index: 300;
+.banner-container {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+
+  -webkit-flex-direction: column;
+  flex-direction: column;
+}
+
+.hello{
+  flex-grow: 2;
+  background-color: transparent;
+  margin-top: 50px;
   position: relative;
 }
 
@@ -20,28 +33,39 @@ Mobile
 }
 
 .homesection-banner-mobile {
+  background: url('../../../../assets/about2.png') no-repeat ;
   color: transparent;
   text-indent:-9999px;
-  background: url('../../../../assets/about2.png') no-repeat fixed;
-  background-size: contain;
-  background-position: center;
-  height: 60vh;
+  background-size: cover;
+
+  width: 100%;
+  height: 40vh;
   margin: 0;
-  margin-bottom: -50px;
+
 }
 
 .homesection-banner-desktop {
   color: transparent;
   text-indent:-9999px;
-  background: url('../../../../assets/about2.png') no-repeat fixed;
+  background: url('../../../../assets/about2.png') no-repeat ;
   background-size: contain;
-  background-position: center;
-  height: 80vh;
+  width: 100%;
   margin: 0;
-  margin-bottom: -260px;
+
 }
 
 @media only screen and (min-width: 580px) {
+  .banner-container {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+
+    -webkit-flex-direction: row;
+    flex-direction: row;
+  }
+
   .popover {
     margin-left: 30px;
     margin-top: 100px;
@@ -50,7 +74,7 @@ Mobile
   .homesection-banner-mobile {
     color: transparent;
     text-indent:-9999px;
-    background: url('../../../../assets/responsive.png') no-repeat fixed;
+    background: url('../../../../assets/responsive.png') no-repeat ;
     background-size: 50%;
     background-position: center;
     height: 80vh;
@@ -61,7 +85,7 @@ Mobile
   .homesection-banner-desktop {
     color: transparent;
     text-indent:-9999px;
-    background: url('../../../../assets/responsive.png') no-repeat fixed;
+    background: url('../../../../assets/responsive.png') no-repeat ;
     background-size: 50%;
     background-position: center;
     height: 80vh;
@@ -74,6 +98,17 @@ Mobile
 Tablet
 ***********/
 @media only screen and (min-width: 768px) {
+  .banner-container {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+
+    -webkit-flex-direction: row;
+    flex-direction: row;
+  }
+
   .popover {
     margin-left: 5px;
     margin-top: 100px
@@ -82,7 +117,7 @@ Tablet
   .homesection-banner-mobile {
     color: transparent;
     text-indent:-9999px;
-    background: url('../../../../assets/responsive.png') no-repeat fixed;
+    background: url('../../../../assets/responsive.png') no-repeat;
     background-size: 50%;
     background-position: center;
     height: 80vh;
@@ -93,7 +128,7 @@ Tablet
   .homesection-banner-desktop {
     color: transparent;
     text-indent:-9999px;
-    background: url('../../../../assets/responsive.png') no-repeat fixed;
+    background: url('../../../../assets/responsive.png') no-repeat;
     background-size: 50% ;
     background-position: center;
     height: 80vh;
@@ -107,6 +142,16 @@ Tablet
 Desktop
 ***********/
 @media only screen and (min-width: 1024px) {
+  .banner-container {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+
+    -webkit-flex-direction: row;
+    flex-direction: row;
+  }
 
   .popover {
     margin-left: -330px;

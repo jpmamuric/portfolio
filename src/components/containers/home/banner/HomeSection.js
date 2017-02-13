@@ -32,10 +32,13 @@ class HomeSection extends React.Component {
   render() {
     return (
       <article>
-        <div
-          className={this.state.banner}
-          onTouchTap={this.handleTouchTap.bind(this)}
-          >
+        <div className='banner-container'>
+          <div className='hello'>Hello</div>
+          <div
+            className={this.state.banner}
+            onTouchTap={this.handleTouchTap.bind(this)}
+            >
+          </div>
         </div>
         <Popover
           className='popover'
