@@ -5,6 +5,20 @@ Media Queries
 /**********
 Mobile
 ***********/
+.floating-button{
+  z-index: 300;
+  position: relative;
+}
+
+.popover {
+  margin-left: 90px;
+  margin-right: 20px;
+}
+.popover-message {
+  padding: 10px;
+  font-size: 24px;
+}
+
 .homesection-banner-mobile {
   color: transparent;
   text-indent:-9999px;
@@ -14,7 +28,6 @@ Mobile
   height: 60vh;
   margin: 0;
   margin-bottom: -50px;
-
 }
 
 .homesection-banner-desktop {
@@ -29,6 +42,11 @@ Mobile
 }
 
 @media only screen and (min-width: 580px) {
+  .popover {
+    margin-left: 30px;
+    margin-top: 100px;
+  }
+
   .homesection-banner-mobile {
     color: transparent;
     text-indent:-9999px;
@@ -56,6 +74,11 @@ Mobile
 Tablet
 ***********/
 @media only screen and (min-width: 768px) {
+  .popover {
+    margin-left: 5px;
+    margin-top: 100px
+  }
+
   .homesection-banner-mobile {
     color: transparent;
     text-indent:-9999px;
@@ -84,6 +107,11 @@ Tablet
 Desktop
 ***********/
 @media only screen and (min-width: 1024px) {
+
+  .popover {
+    margin-left: -330px;
+    margin-top: 160px;
+  }
 
   .homesection-banner-mobile {
     color: orange;

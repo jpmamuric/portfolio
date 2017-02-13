@@ -1,5 +1,6 @@
 import React from 'react';
 
+import Popover from 'material-ui/Popover';
 import './HomeSection.css';
 
 class HomeSection extends React.Component {
@@ -7,7 +8,8 @@ class HomeSection extends React.Component {
     super(props);
     this.state = {
       banner: '',
-      bannerImg: ''
+      bannerChat: '',
+      open: false
     }
   }
   componentWillMount() {
@@ -18,16 +20,38 @@ class HomeSection extends React.Component {
     }
   }
 
-  renderArticle() {
+  handleTouchTap(e){
+    e.preventDefault();
+    this.setState({ open: true, anchorEl: e.currentTarget })
+  }
 
+  handleClose(){
+    this.setState({ open: false});
   }
 
   render() {
     return (
       <article>
-        <div className={this.state.banner}>
-          <img className={this.state.bannerImg} alt='jp mamuric'/>
+        <div
+          className={this.state.banner}
+          onTouchTap={this.handleTouchTap.bind(this)}
+          >
         </div>
+        <Popover
+          className='popover'
+          open={this.state.open}
+          anchorEl={this.state.anchorEl}
+          onRequestClose={this.handleClose.bind(this)}
+          anchorOrigin={{horizontal: 'middle', vertical: 'center'}}
+          targetOrigin={{horizontal: 'left', vertical: 'center'}}
+          >
+         <div
+            onTouchTap={this.handleClose.bind(this)}
+            className='popover-message'>Hello! and welcome to my component based system
+         </div>
+
+        </Popover>
+
       </article>
     );
   }
