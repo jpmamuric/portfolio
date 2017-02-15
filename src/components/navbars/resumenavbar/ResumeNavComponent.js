@@ -31,6 +31,10 @@ class ResumeNavComponent extends React.Component {
           open={this.state.open}
           onRequestChange={(open) => this.setState({open})}
           >
+          <img
+            className='logo'
+            style={{ width: 280 }} src={require('../../../assets/logo2.png')}
+            alt='jp mamuric'/>
           <Link to='/'>
             <MenuItem onTouchTap={this.handleClose.bind(this)}>Home
             </MenuItem>

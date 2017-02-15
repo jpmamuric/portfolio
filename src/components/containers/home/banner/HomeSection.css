@@ -5,6 +5,7 @@ Media Queries
 /**********
 Mobile
 ***********/
+
 .banner-container {
   display: -webkit-box;
   display: -moz-box;
@@ -12,35 +13,82 @@ Mobile
   display: -webkit-flex;
   display: flex;
 
-  -webkit-flex-direction: column;
-  flex-direction: column;
+  -webkit-flex-flow: column;
+  flex-flow: column;
+  height: 55vh;
 }
 
 .hello{
+  padding: 5px;
+  opacity: 0.2;
   flex-grow: 2;
   background-color: transparent;
-  margin-top: 50px;
+  margin: 10px;
   position: relative;
+  border: 2px solid #808080;
+
 }
 
 /******  POPOVER   *****/
 .popover {
   margin-left: 90px;
   margin-right: 20px;
+
 }
 .popover-message {
   padding: 10px;
-  font-size: 24px;
+  font-size: 16px;
+  background-color: #FBA76C;
 }
 
-/******  LANDING PAGE IMAGE   *****/
+.thought-cloud-lg {
+  position: absolute;
+  left: 1em;
+  top: 8em;
+  animation: Cloud-float 10s infinite both ;
+  width: 90%;
+}
+
+.thought-cloud-md {
+  top: 20em;
+  left:1em;
+  position: absolute;
+  width: 3em;
+  height: 2em;
+  animation: Cloud-float 9s infinite both ;
+}
+
+.thought-cloud-sm {
+  position: absolute;
+  top: 23em;
+  left: 2em;
+  width: 2em;
+  height: 1em;
+  animation: Cloud-float 9.1s infinite both ;
+}
+
+
+@keyframes Cloud-float {
+  0%  {
+    transform: rotate(0deg) translateX(5px) rotate(0deg);
+  }
+  50%{
+    transform: rotate(180deg) translateX(5px) rotate(-180deg);
+  }
+  100%{
+    transform: rotate(0deg) translateX(5px) rotate(0deg);
+  }
+}
+
+/********  Landing Page Images *********/
+
 .homesection-banner-mobile {
   background: url('../../../../assets/about2.png') no-repeat ;
   color: transparent;
   text-indent:-9999px;
-  background-size: cover;
-  width: 100%;
-  height: 40vh;
+  background-size: contain;
+  max-width: 100%;
+  height: 25vh;
   margin: 0;
 }
 
@@ -48,45 +96,104 @@ Mobile
   background: url('../../../../assets/about2.png') no-repeat ;
   color: transparent;
   text-indent:-9999px;
-  background-size: cover;
-  width: 100%;
-  height: 40vh;
+  background-size: contain;
+  max-width: 100%;
+  height: 30vh;
   margin: 0;
   -webkit-filter: blur(3px);
   filter: blur(3px);
+  position: relative;
 }
 
 .homesection-banner-desktop {
   background: url('../../../../assets/about2.png') no-repeat ;
   color: transparent;
   text-indent:-9999px;
-  background-size: cover;
-  width: 100%;
-  height: 40vh;
+  background-size: contain;
+  max-width: 100%;
+  height: 25vh;
   margin: 0;
-
 }
 
-@media only screen and (min-width: 580px) {
-
-/******  POPOVER   *****/
-  .popover {
-    margin-left: 30px;
-    margin-top: 130px;
+/* EXTRA SMALL PHONES */
+@media only screen and (min-width: 350px) {
+  .thought-cloud-md {
+    top: 22em;
+    left:1em;
   }
 
+  .thought-cloud-sm {
+    top: 25.5em;
+    left: 2em;
+  }
+}
+
+/* MOST PHONES */
+@media only screen and (min-width: 400px) {
+  .thought-cloud-md {
+    top: 23em;
+    left:1em;
+  }
+
+  .thought-cloud-sm {
+    top: 27em;
+    left: 2em;
+  }
+}
+
+/* PHONES SIDEWAYS */
+@media only screen and (min-width: 480px) {
+  .banner-container {
+    height: 130vh;
+  }
+  .thought-cloud-lg {
+    max-width: 500px;
+    top: 10em;
+  }
+
+  .thought-cloud-md {
+    top: 27em;
+  }
+
+  .thought-cloud-sm {
+    top: 30em;
+  }
+
+
   .homesection-banner-mobile {
-    background: url('../../../../assets/responsive.png') no-repeat ;
-    background-size: 50%;
-    background-position: center;
-    height: 80vh;
+    height: 50vh;
+    margin-top: -2em;
   }
 
   .homesection-banner-desktop {
-    background: url('../../../../assets/responsive.png') no-repeat ;
-    background-size: 50%;
-    background-position: center;
-    height: 80vh;
+    height: 50vh;
+    margin-top: -2em;
+  }
+}
+
+/*LARGE PHONES SIDEWAYS*/
+@media only screen and (min-width: 700px) {
+  .banner-container {
+    height: 130vh;
+  }
+  .thought-cloud-lg {
+    max-width: 500px;
+  }
+
+  .thought-cloud-md {
+    top: 27em;
+  }
+
+  .thought-cloud-sm {
+    top: 30em;
+  }
+
+  .homesection-banner-mobile {
+    margin-top: -7em;
+  }
+
+  .homesection-banner-desktop {
+    margin-top: -7em;
   }
 }
 
@@ -95,25 +202,33 @@ Tablet
 ***********/
 @media only screen and (min-width: 768px) {
   .banner-container {
-    -webkit-flex-direction: row;
-    flex-direction: row;
+    -webkit-flex-flow: row ;
+    flex-flow: row ;
   }
 
-/******  POPOVER   *****/
-  .popover {
-    margin-left: 5px;
-    margin-top: 150px
+  .homesection-banner-mobile {
+    height: 0;
+    margin-top: 0;
+    background: none ;
+  }
+
+  .homesection-banner-desktop {
+    height: 0;
+    margin-top: 0;
+    background: none ;
   }
 }
+
 
 /**********
 Desktop
 ***********/
 @media only screen and (min-width: 1024px) {
-
-/******  POPOVER   *****/
-  .popover {
-    margin-left: -130px;
-    margin-top: 160px;
+  .thought-cloud-lg {
+    margin: 0;
+    padding: 0;
+    top: 12em;
+    left: 8em;
   }
+
 }

@@ -50,7 +50,7 @@ class HomeNavComponent extends React.Component {
         yourFortune = 'You will meet someone amazing';
         break;
       case 2:
-        yourFortune = 'You will make alot of money';
+        yourFortune = 'You will make a lot of money';
         break;
       case 3:
         yourFortune = 'You will find joy in simplicity';
@@ -80,6 +80,7 @@ class HomeNavComponent extends React.Component {
       <div>
         <MyAppBar
           title={this.state.greeting}
+          className='home-nav'
           style={{backgroundColor: 'rgba(94, 184, 204, 1)' }} onLeftIconButtonTouchTap={()=>this.handleLeftTouchTap()}
           iconElementRight={
             <img
@@ -90,13 +91,17 @@ class HomeNavComponent extends React.Component {
             />
           }
         />
-      <Paper className='slideDown' zDepth={2} style={{fontSize: 12, padding: 5 }}>{this.state.fortune}</Paper>
+      <Paper className='slideDown fortune' zDepth={2} style={{fontSize: 12, padding: 5 }}>{this.state.fortune}</Paper>
         <Drawer
           docked={false}
           width={300}
           open={this.state.open}
           onRequestChange={(open) => this.setState({open})}
           >
+          <img
+            className='logo' src={require('../../../assets/logo.png')}
+            alt='jp mamuric'
+            />
           <Link to='/'>
             <MenuItem onTouchTap={this.handleClose.bind(this)}>Home
             </MenuItem>

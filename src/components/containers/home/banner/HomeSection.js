@@ -22,7 +22,7 @@ class HomeSection extends React.Component {
 
   handleTouchTap(e){
     e.preventDefault();
-    if (window.innerWidth >= 580 ) {
+    if (window.innerWidth >= 550 ) {
         this.setState({ banner: 'homesection-banner-desktop'});
       } else {
         this.setState({ banner: 'homesection-banner-mobile-blur'});
@@ -44,16 +44,27 @@ class HomeSection extends React.Component {
   }
 
   render() {
-
     return (
       <article>
         <div className='banner-container'>
-          <div className='hello'>Hello</div>
+          <img
+            alt='jp mamuric thought cloud'
+            className='thought-cloud-lg'
+            src={require('../../../../assets/lrgthought.png')}/>
+          <img
+            alt='jp mamuric thought cloud'
+            className='thought-cloud-md'
+            src={require('../../../../assets/medthought.png')}/>
+          <img
+            alt='jp mamuric thought cloud'
+            className='thought-cloud-sm'
+            src={require('../../../../assets/smthought.png')}/>
+
+          </div>
           <div
             className={this.state.banner}
             onTouchTap={this.handleTouchTap.bind(this)}
             >
-          </div>
         </div>
         <Popover
           className='popover'
