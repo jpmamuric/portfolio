@@ -77,41 +77,43 @@ class HomeNavComponent extends React.Component {
 
   render() {
     return (
-      <div>
-        <MyAppBar
-          title={this.state.greeting}
-          className='home-nav'
-          style={{backgroundColor: 'rgba(94, 184, 204, 1)' }} onLeftIconButtonTouchTap={()=>this.handleLeftTouchTap()}
-          iconElementRight={
+      <header>
+        <div>
+          <MyAppBar
+            title={this.state.greeting}
+            className='home-nav'
+            style={{backgroundColor: 'rgba(94, 184, 204, 1)' }} onLeftIconButtonTouchTap={()=>this.handleLeftTouchTap()}
+            iconElementRight={
+              <img
+                onTouchTap={()=>this.handleImgTouchTap()}
+                alt='jp mamuric'
+                className='home-icon App-logo'
+                src={require('../../../assets/logosm.png')}
+              />
+            }
+          />
+        <Paper className='slideDown fortune' zDepth={2} style={{fontSize: 12, padding: 5 }}>{this.state.fortune}</Paper>
+          <Drawer
+            docked={false}
+            width={300}
+            open={this.state.open}
+            onRequestChange={(open) => this.setState({open})}
+            >
             <img
-              onTouchTap={()=>this.handleImgTouchTap()}
+              className='logo' src={require('../../../assets/logo.png')}
               alt='jp mamuric'
-              className='home-icon App-logo'
-              src={require('../../../assets/logosm.png')}
-            />
-          }
-        />
-      <Paper className='slideDown fortune' zDepth={2} style={{fontSize: 12, padding: 5 }}>{this.state.fortune}</Paper>
-        <Drawer
-          docked={false}
-          width={300}
-          open={this.state.open}
-          onRequestChange={(open) => this.setState({open})}
-          >
-          <img
-            className='logo' src={require('../../../assets/logo.png')}
-            alt='jp mamuric'
-            />
-          <Link to='/'>
-            <MenuItem onTouchTap={this.handleClose.bind(this)}>Home
-            </MenuItem>
-          </Link>
-          <Link  to='/resume'>
-            <MenuItem onTouchTap={this.handleClose.bind(this)}>Resume
-            </MenuItem>
-          </Link>
-          </Drawer>
-      </div>
+              />
+            <Link to='/'>
+              <MenuItem onTouchTap={this.handleClose.bind(this)}>Home
+              </MenuItem>
+            </Link>
+            <Link  to='/resume'>
+              <MenuItem onTouchTap={this.handleClose.bind(this)}>Resume
+              </MenuItem>
+            </Link>
+            </Drawer>
+        </div>
+      </header>
     );
   }
 }

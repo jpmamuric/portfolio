@@ -1,3 +1,69 @@
+.greetings-text-container {
+  margin: 0 auto 40px;
+}
+
+.g1 {
+  font-size: 6.5em;
+  line-height: 1em;
+  display: block;
+  font-weight: 700;
+  padding-right: 170px;
+}
+
+.g2{
+  font-size: 3.8125em;
+  line-height: .85em;
+  display: block;
+  padding-right: 30px;
+}
+
+.g3 {
+  font-size: 6em;
+  line-height: .78em;
+  display: block;
+  font-weight: 700;
+  color: #41969c;
+  padding-top: 10px;
+  padding-right: 180px;
+}
+
+.g4 {
+  font-size: .9em;
+  line-height: 1.7em;
+  display: block;
+  padding-right: 100px;
+}
+
+.g5 {
+  font-size: 4.5em;
+  display: inline-block;
+  font-weight: 700;
+  color: #41969c;
+  line-height: 1.1em;
+  padding-right: 10px;
+}
+
+.g6 {
+  margin-left: .3em;
+  margin-right: -10px;
+}
+
+.g7 {
+  font-size: 2.3em;
+  display: block;
+  line-height: 1.12em;
+  font-weight: 700;
+  color: #41969c;
+  text-align: center;
+  margin-bottom: 9px;
+}
+
+.g8 {
+  display: block;
+  font-size: 3em;
+  line-height: 1em;
+  padding-left: 10px;
+}
 
 /**********************************
 Media Queries
@@ -5,37 +71,58 @@ Media Queries
 /**********
 Mobile
 ***********/
-.greetings-container {
-  background-color: white;
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  flex-direction: column;
-  width: 100%;
+.greetings-main-container {
   height: 600px;
-  padding-top: 10px;
-  z-index: 500;
-  position: relative;
+  font-size: .75em;
+  background-color: orange;
+  flex-direction: column;
+  justify-content: flex-end;
 }
-@media only screen and (min-width: 550px) {
-  .greetings-container{
-    margin-top: 0;
-  }
+
+.greetings-text-container {
+  margin: 0;
+  justify-content: center;
+  align-items: center;
 }
+
+.greetings-text{
+
+}
+
+.greetings-img {
+  width: 100%;
+  max-width: 300px;
+}
+
 /**********
 Tablet
 ***********/
 @media only screen and (min-width: 768px) {
+  .greetings-main-container {
+    height:400px;
+    flex-direction: row-reverse;
+    background-color: white;
+    align-items: center;
+  }
 
+  .greetings-img {
+    max-width: 500px;
+    margin-top: 64px;
+    margin-right: -20em;
+  }
 }
 
 /**********
 Desktop
 ***********/
 @media only screen and (min-width: 1024px) {
+  .greetings-main-container {
+    height:472px;
+  }
 
+  .greetings-img {
+    max-width: 700px;
+    margin-top: 0px;
+    margin-right: -30em;
+  }
 }

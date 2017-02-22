@@ -5,19 +5,25 @@ import './GreetingSection.css';
 class GreetingSection extends React.Component {
   render() {
     return (
-      <div className='greetings-container'>
-        <div>
-          Hello! my name is
+      <section>
+        <div className='greetings-main-container flex-it'>
+          <div className='greetings-text-container flex-it'>
+            <div className='greetings-text'>
+              <span className='g1'>Hi!</span>
+              <span className='g2'>my name is</span>
+              <span className='g3'>JP </span>
+              <span className='g4'>(short for Jan Peter)</span>
+              <span className='g5'>Mamuric</span>
+              <span className='g6'>and I'm a  </span>
+              <span className='g7'>javascript developer</span>
+              <span className='g8'>Nice to meet you!</span>
+            </div>
+          </div>
+          <img className='greetings-img' alt='jp greetings' src={require('../../../../assets/about2.png')}/>
         </div>
-        <div>
-          Jan Peter Mamuric
-        </div>
-        <div>I am a: </div>
-        <div>Nice to meet you!</div>
-      </div>
+      </section>  
     );
   }
-
 }
 
 export default GreetingSection;

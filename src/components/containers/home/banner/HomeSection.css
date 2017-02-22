@@ -1,234 +1,78 @@
 /**********************************
+Flexbox
+***********************************/
+.landing-message {
+  color: white;
+}
+
+/**********************************
 Media Queries
 ***********************************/
-
+.landing-img {
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('../../../../assets/webdeveloper.jpg'), no-repeat center;
+  background-size: cover !important;
+  background-position: 50% 50% !important;
+  width: 100%;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 /**********
 Mobile
 ***********/
-
-.banner-container {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-
-  -webkit-flex-flow: column;
-  flex-flow: column;
-  height: 55vh;
-}
-
-.hello{
-  padding: 5px;
-  opacity: 0.2;
-  flex-grow: 2;
-  background-color: transparent;
-  margin: 10px;
-  position: relative;
-  border: 2px solid #808080;
-
-}
-
-/******  POPOVER   *****/
-.popover {
-  margin-left: 90px;
-  margin-right: 20px;
-
-}
-.popover-message {
-  padding: 10px;
-  font-size: 16px;
-  background-color: #FBA76C;
-}
-
-.thought-cloud-lg {
-  position: absolute;
-  left: 1em;
-  top: 8em;
-  animation: Cloud-float 10s infinite both ;
-  width: 90%;
-}
-
-.thought-cloud-md {
-  top: 20em;
-  left:1em;
-  position: absolute;
-  width: 3em;
-  height: 2em;
-  animation: Cloud-float 9s infinite both ;
-}
-
-.thought-cloud-sm {
-  position: absolute;
-  top: 23em;
-  left: 2em;
-  width: 2em;
-  height: 1em;
-  animation: Cloud-float 9.1s infinite both ;
-}
-
-
-@keyframes Cloud-float {
-  0%  {
-    transform: rotate(0deg) translateX(5px) rotate(0deg);
-  }
-  50%{
-    transform: rotate(180deg) translateX(5px) rotate(-180deg);
-  }
-  100%{
-    transform: rotate(0deg) translateX(5px) rotate(0deg);
-  }
-}
-
-/********  Landing Page Images *********/
-
-.homesection-banner-mobile {
-  background: url('../../../../assets/about2.png') no-repeat ;
-  color: transparent;
-  text-indent:-9999px;
-  background-size: contain;
-  max-width: 100%;
-  height: 25vh;
-  margin: 0;
-}
-
-.homesection-banner-mobile-blur {
-  background: url('../../../../assets/about2.png') no-repeat ;
-  color: transparent;
-  text-indent:-9999px;
-  background-size: contain;
-  max-width: 100%;
-  height: 30vh;
-  margin: 0;
-  -webkit-filter: blur(3px);
-  filter: blur(3px);
-  position: relative;
-}
-
-.homesection-banner-desktop {
-  background: url('../../../../assets/about2.png') no-repeat ;
-  color: transparent;
-  text-indent:-9999px;
-  background-size: contain;
-  max-width: 100%;
-  height: 25vh;
-  margin: 0;
-}
-
-/* EXTRA SMALL PHONES */
-@media only screen and (min-width: 350px) {
-  .thought-cloud-md {
-    top: 22em;
-    left:1em;
-  }
-
-  .thought-cloud-sm {
-    top: 25.5em;
-    left: 2em;
-  }
-}
-
-/* MOST PHONES */
-@media only screen and (min-width: 400px) {
-  .thought-cloud-md {
-    top: 23em;
-    left:1em;
-  }
-
-  .thought-cloud-sm {
-    top: 27em;
-    left: 2em;
-  }
-}
-
-/* PHONES SIDEWAYS */
 @media only screen and (min-width: 480px) {
-  .banner-container {
-    height: 130vh;
-  }
-  .thought-cloud-lg {
-    max-width: 500px;
-    top: 10em;
-  }
 
-  .thought-cloud-md {
-    top: 27em;
-  }
-
-  .thought-cloud-sm {
-    top: 30em;
-  }
-
-
-  .homesection-banner-mobile {
-    height: 50vh;
-    margin-top: -2em;
-  }
-
-  .homesection-banner-desktop {
-    height: 50vh;
-    margin-top: -2em;
-  }
 }
-
-/*LARGE PHONES SIDEWAYS*/
-@media only screen and (min-width: 700px) {
-  .banner-container {
-    height: 130vh;
-  }
-  .thought-cloud-lg {
-    max-width: 500px;
-  }
-
-  .thought-cloud-md {
-    top: 27em;
-  }
-
-  .thought-cloud-sm {
-    top: 30em;
-  }
-
-  .homesection-banner-mobile {
-    margin-top: -7em;
-  }
-
-  .homesection-banner-desktop {
-    margin-top: -7em;
-  }
-}
-
 /**********
 Tablet
 ***********/
 @media only screen and (min-width: 768px) {
-  .banner-container {
-    -webkit-flex-flow: row ;
-    flex-flow: row ;
-  }
-
-  .homesection-banner-mobile {
-    height: 0;
-    margin-top: 0;
-    background: none ;
-  }
-
-  .homesection-banner-desktop {
-    height: 0;
-    margin-top: 0;
-    background: none ;
-  }
 }
-
 
 /**********
 Desktop
 ***********/
 @media only screen and (min-width: 1024px) {
-  .thought-cloud-lg {
-    margin: 0;
-    padding: 0;
-    top: 12em;
-    left: 8em;
-  }
 
+}
+
+
+/**********
+Keyframes
+***********/
+
+.slideUp{
+	animation-name: slideUp;
+	-webkit-animation-name: slideUp;
+
+	animation-duration: 1s;
+	-webkit-animation-duration: 1s;
+
+	animation-timing-function: ease;
+	-webkit-animation-timing-function: ease;
+
+	visibility: visible !important;
+}
+
+@keyframes slideUp {
+	0% {
+    opacity: 0;
+		transform: translateY(100%);
+	}
+	100% {
+    opacity: 1;
+		transform: translateY(0%);
+	}
+}
+
+@-webkit-keyframes slideUp {
+	0% {
+    opacity: 0;
+		-webkit-transform: translateY(100%);
+	}
+	100% {
+    opacity: 1;
+		-webkit-transform: translateY(0%);
+	}
 }

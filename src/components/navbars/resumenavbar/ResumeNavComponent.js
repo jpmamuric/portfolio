@@ -23,28 +23,30 @@ class ResumeNavComponent extends React.Component {
 
   render() {
     return (
-      <div>
-        <MyAppBar title='Resume' onLeftIconButtonTouchTap={()=>this.handleTouchTap()} />
-        <Drawer
-          docked={false}
-          width={300}
-          open={this.state.open}
-          onRequestChange={(open) => this.setState({open})}
-          >
-          <img
-            className='logo'
-            style={{ width: 280 }} src={require('../../../assets/logo2.png')}
-            alt='jp mamuric'/>
-          <Link to='/'>
-            <MenuItem onTouchTap={this.handleClose.bind(this)}>Home
-            </MenuItem>
-          </Link>
-          <Link  to='/resume'>
-            <MenuItem onTouchTap={this.handleClose.bind(this)}>Resume
-            </MenuItem>
-          </Link>
-          </Drawer>
-      </div>
+      <header>
+        <div>
+          <MyAppBar title='Resume' onLeftIconButtonTouchTap={()=>this.handleTouchTap()} />
+          <Drawer
+            docked={false}
+            width={300}
+            open={this.state.open}
+            onRequestChange={(open) => this.setState({open})}
+            >
+            <img
+              className='logo'
+              style={{ width: 280 }} src={require('../../../assets/logo2.png')}
+              alt='jp mamuric'/>
+            <Link to='/'>
+              <MenuItem onTouchTap={this.handleClose.bind(this)}>Home
+              </MenuItem>
+            </Link>
+            <Link  to='/resume'>
+              <MenuItem onTouchTap={this.handleClose.bind(this)}>Resume
+              </MenuItem>
+            </Link>
+            </Drawer>
+        </div>
+      </header>
     );
   }
 }
