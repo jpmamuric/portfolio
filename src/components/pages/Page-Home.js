@@ -4,6 +4,7 @@ import HomeNavComponent from '../navbars/homenavbar/HomeNavComponent';
 import HomeSection      from '../containers/home/banner/HomeSection';
 import GreetingSection  from '../containers/home/greetings/GreetingSection';
 import SkillsSection    from '../containers/home/skills/SkillsSection';
+import QuoteSection     from '../containers/home/quote/QuoteSection';
 
 import './pages.css';
 
@@ -14,6 +15,7 @@ const Home = () => {
       <HomeSection />
       <GreetingSection />
       <SkillsSection />
+      <QuoteSection />
     </div>
   );
 }

@@ -99,19 +99,23 @@ class HomeNavComponent extends React.Component {
             open={this.state.open}
             onRequestChange={(open) => this.setState({open})}
             >
-            <img
-              className='logo' src={require('../../../assets/logo.png')}
-              alt='jp mamuric'
-              />
-            <Link to='/'>
-              <MenuItem onTouchTap={this.handleClose.bind(this)}>Home
-              </MenuItem>
-            </Link>
-            <Link  to='/resume'>
-              <MenuItem onTouchTap={this.handleClose.bind(this)}>Resume
-              </MenuItem>
-            </Link>
-            </Drawer>
+              <img
+                className='logo' src={require('../../../assets/logo.png')}
+                alt='jp mamuric'
+                />
+              <Link to='/'>
+                <MenuItem onTouchTap={this.handleClose.bind(this)}>Home
+                </MenuItem>
+              </Link>
+              <Link  to='/resume'>
+                <MenuItem onTouchTap={this.handleClose.bind(this)}>Resume
+                </MenuItem>
+              </Link>
+              <Link  to='/contact'>
+                <MenuItem onTouchTap={this.handleClose.bind(this)}>Contact
+                </MenuItem>
+              </Link>
+          </Drawer>
         </div>
       </header>
     );

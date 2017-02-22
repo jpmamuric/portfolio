@@ -1,0 +1,13 @@
+.quote-main-section {
+  background-color: #41969c;
+}
+
+@media only screen and (min-width: 768px) {
+  .quote-main-section {
+    background-color: white;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+
+}
