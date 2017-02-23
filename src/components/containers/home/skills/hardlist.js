@@ -3,7 +3,14 @@ import React from 'react';
 class HardList extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {  hsUrl: 'logosm.png', link: ''}
+    this.state = {  hsUrl: 'logosm2.png', link: '', hoverClass: 'image-spin'}
+  }
+  setHoverClass(){
+    if (this.state.hoverClass === 'image-spin') {
+      this.setState({hoverClass: ''});
+    } else {
+      this.setState({hoverClass: 'image-spin'})
+    }
   }
 
   render() {
@@ -19,27 +26,33 @@ class HardList extends React.Component {
       },
       {
         name : 'Redux',
-        hsUrl: 'redux.png'
+        hsUrl: 'redux.png',
+        link: 'http://redux.js.org/'
       },
       {
         name : 'Angular 2',
-        hsUrl: 'angular.png'
+        hsUrl: 'angular.png',
+        link: 'https://angularjs.org/'
       },
       {
         name : 'Wordpress',
-        hsUrl: 'wordpress.png'
+        hsUrl: 'wordpress.png',
+        link: 'https://wordpress.org/'
       },
       {
         name : 'Node.js',
-        hsUrl: 'nodejs.png'
+        hsUrl: 'nodejs.png',
+        link: 'https://nodejs.org/en/about/'
       },
       {
         name : 'MongoDB',
-        hsUrl: 'mongodb.png'
+        hsUrl: 'mongodb.png',
+        link: 'https://www.mongodb.com/'
       },
       {
         name : 'GIT',
-        hsUrl: 'git.png'
+        hsUrl: 'git.png',
+        link: 'https://git-scm.com/'
       },
       {
         name : 'Restful APIs'
@@ -59,7 +72,7 @@ class HardList extends React.Component {
     return (
       <div className='hs-container box-shadow flex-it'>
         <div>
-          <h2>Hard Skills</h2>
+          <h2 onTouchTap={()=>this.setHoverClass()}>Hard Skills</h2>
           <ul className='hs-ul'>
             {
               hardskills.map ((item, i) => {
@@ -67,7 +80,7 @@ class HardList extends React.Component {
                   <li
                     key={i}
                     className='hs-li'
-                    onTouchTap={()=>this.setState({hsUrl: item.hsUrl})} onMouseOver={()=>this.setState({hsUrl: item.hsUrl})} >
+                    onTouchTap={()=>this.setState({hsUrl: item.hsUrl, link: item.link})} onMouseOver={()=>this.setState({hsUrl: item.hsUrl, link: item.link})} >
                       {item.name}
                   </li>
                 );
@@ -81,7 +94,9 @@ class HardList extends React.Component {
             <strong> Greater </strong>
            </p>
         </div>
-        <img className='hs-img' alt='website logo' src={require(`../../../../assets/skills/${this.state.hsUrl}`)}/>
+        <a className='hs-link' href={this.state.link} target='_blank'>
+          <img className={`hs-img  ${this.state.hoverClass}`} alt='website logo' src={require(`../../../../assets/skills/${this.state.hsUrl}`)}/>
+        </a>
       </div>
     );
   }
