@@ -1,4 +1,9 @@
-
+a:link,
+a:visited,
+a:active {
+  color: black;
+  text-decoration: none;
+}
 /**********************************
 Media Queries
 ***********************************/
@@ -34,6 +39,11 @@ Media Queries
   margin: 20px 0;
 }
 
+.hs-greater {
+  font-size: 3em;
+  margin: 20px 0;
+}
+
 .ss-ul {
   padding: 0;
 }
@@ -42,12 +52,17 @@ Media Queries
   padding: 0;
 }
 
-.hs-greater {
-  font-size: 3em;
-  margin: 20px 0;
+strong {
+  color: #41969c;
 }
 
-strong {
+.hs-li {
+  display: block;
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.hs-li:hover {
   color: #41969c;
 }
 
@@ -92,6 +107,10 @@ strong {
     justify-content: flex-start;
   }
 
+  .softskills {
+    flex-direction: row-reverse;
+  }
+
   .ss-stronger {
     font-size: 2.5em;
   }
@@ -103,18 +122,27 @@ strong {
   .ss-img {
     width: 100%;
     min-width: 180px;
-    max-width: 300px;
+    max-width: 350px;
   }
 
   .hs-img {
     width: 100%;
     min-width: 180px;
-    max-width: 300px;
+    max-width: 350px;
+    margin-left: 25px;
   }
 
 }
 
 /*** DESKTOP ***/
 @media only screen and (min-width: 1024px) {
+  .ss-img {
+    margin-left: 50px;
+    margin-right: 50px;
+  }
 
+  .hs-img {
+    margin-left: 50px;
+    margin-right: 50px;
+  }
 }

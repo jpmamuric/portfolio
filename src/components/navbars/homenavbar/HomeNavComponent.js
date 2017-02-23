@@ -88,7 +88,7 @@ class HomeNavComponent extends React.Component {
                 onTouchTap={()=>this.handleImgTouchTap()}
                 alt='jp mamuric'
                 className='home-icon App-logo'
-                src={require('../../../assets/logosm.png')}
+                src={require('../../../assets/skills/logosm.png')}
               />
             }
           />
