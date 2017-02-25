@@ -1,5 +1,7 @@
 import React from 'react';
 
+import RaisedButton from 'material-ui/RaisedButton';
+
 class SoftList extends React.Component {
   constructor(props) {
     super(props);
@@ -8,34 +10,73 @@ class SoftList extends React.Component {
 
   render() {
     const softskills = [
-      { name : 'Love to Analyze' },
-      { name : 'Creative' },
-      { name : 'Innovative' },
-      { name : 'Communication' },
-      { name : 'Time Management' },
-      { name : 'Proactive' },
-      { name : 'Teamwork' },
-      { name : 'Open Minded' },
-      { name : 'Self Motivating' },
-      { name : 'Fast Learner' },
-      { name : 'Storyteller' },
-      { name : 'and...' , ssUrl: 'giphy.gif'},
+      {
+        name : 'Love to Analyze',
+        ssUrl: 'analyze.gif'
+      },
+      {
+        name : 'Creative',
+        ssUrl: 'creative.gif'
+      },
+      {
+        name : 'Innovative',
+        ssUrl: 'innovative.gif'
+      },
+      {
+        name : 'Communication',
+        ssUrl: 'communication.gif'
+      },
+      {
+        name : 'Time Management',
+        ssUrl: 'time.gif'
+       },
+      {
+        name : 'Proactive',
+        ssUrl: 'proactive.gif'
+      },
+      {
+        name : 'Teamwork',
+        ssUrl: 'teamwork.gif'
+      },
+      {
+        name : 'Open Minded',
+        ssUrl: 'open2.gif'
+      },
+      {
+        name : 'Self Motivating',
+        ssUrl: 'selfmotivating.gif'
+      },
+      {
+        name : 'Fast Learner',
+        ssUrl: 'fastlearner.gif'
+
+      },
+      {
+        name : 'Storyteller',
+        ssUrl: 'storytime.gif'
+      },
+      {
+        name : 'and...' ,
+        ssUrl: 'giphy.gif'
+      },
     ];
 
     return (
       <div className='ss-container box-shadow flex-it'>
         <div>
           <h2>Soft Skills</h2>
+
           <ul className='ss-ul'>
             {
               softskills.map ((item, i) => {
                 return (
-                  <li key={i} className='hs-li' onMouseOver={()=>this.setState({ssUrl: item.ssUrl})}>{item.name}
+                  <li key={i} className='hs-li' onTouchTap={()=>this.setState({ssUrl: item.ssUrl})}>{item.name}
                   </li>
                 );
               })
             }
           </ul>
+          <RaisedButton label='learn more' />
           <p className='ss-stronger'>working
             <br />
             to be

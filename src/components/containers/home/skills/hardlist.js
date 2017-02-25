@@ -1,15 +1,17 @@
 import React from 'react';
 
+import RaisedButton from 'material-ui/RaisedButton';
+
 class HardList extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {  hsUrl: 'logosm2.png', link: '', hoverClass: 'image-spin'}
+    this.state = {  hsUrl: 'logosm2.png', link: '', hoverClass: 'image-spin', btnLabel: 'no spin'}
   }
   setHoverClass(){
     if (this.state.hoverClass === 'image-spin') {
-      this.setState({hoverClass: ''});
+      this.setState({hoverClass: '', btnLabel: 'spin'});
     } else {
-      this.setState({hoverClass: 'image-spin'})
+      this.setState({hoverClass: 'image-spin', btnLabel: 'no spin'});
     }
   }
 
@@ -17,7 +19,8 @@ class HardList extends React.Component {
     const hardskills = [
       {
         name : 'CSS3 & HTML5',
-        hsUrl: 'htmlcss.jpg'
+        hsUrl: 'css.gif',
+        link: ''
       },
       {
         name : 'React',
@@ -55,24 +58,32 @@ class HardList extends React.Component {
         link: 'https://git-scm.com/'
       },
       {
-        name : 'Restful APIs'
+        name : 'Restful APIs',
+        hsUrl: 'api.jpg',
+        link: 'http://www.restapitutorial.com/'
       },
       {
-        name : 'Responsive'
+        name : 'Responsive',
+        hsUrl: 'responsive2.gif',
+        link: 'https://developer.mozilla.org/en-US/Apps/Progressive/Responsive'
       },
       {
-        name : 'Scalable Apps'
+        name : 'Scalable Apps',
+        hsUrl: 'developers.gif',
+        link: ''
       },
       {
         name : 'and...',
-        hsUrl: 'comeatme.gif'
+        hsUrl: 'comeatme.gif',
+        link: ''
       },
     ];
 
     return (
       <div className='hs-container box-shadow flex-it'>
         <div>
-          <h2 onTouchTap={()=>this.setHoverClass()}>Hard Skills</h2>
+          <h2>Hard Skills</h2>
+           <RaisedButton label={this.state.btnLabel} onTouchTap={()=>this.setHoverClass()} />
           <ul className='hs-ul'>
             {
               hardskills.map ((item, i) => {
@@ -80,7 +91,8 @@ class HardList extends React.Component {
                   <li
                     key={i}
                     className='hs-li'
-                    onTouchTap={()=>this.setState({hsUrl: item.hsUrl, link: item.link})} onMouseOver={()=>this.setState({hsUrl: item.hsUrl, link: item.link})} >
+                    onTouchTap={()=>this.setState({hsUrl: item.hsUrl, link: item.link})}
+                    >
                       {item.name}
                   </li>
                 );
@@ -94,7 +106,9 @@ class HardList extends React.Component {
             <strong> Greater </strong>
            </p>
         </div>
-        <a className='hs-link' href={this.state.link} target='_blank'>
+        <a
+          className='hs-link' href={this.state.link} target='_blank'
+          >
           <img className={`hs-img  ${this.state.hoverClass}`} alt='website logo' src={require(`../../../../assets/skills/${this.state.hsUrl}`)}/>
         </a>
       </div>
