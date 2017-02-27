@@ -1,5 +1,8 @@
 .fortune {
   letter-spacing: 1px;
+  font-size: 18px;
+  padding: 10px;
+  text-align: right;
 }
 
 .home-icon {
@@ -10,6 +13,7 @@
 
 .home-nav {
   color: blue;
+  position: fixed;
 }
 
 .logo {

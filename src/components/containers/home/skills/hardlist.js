@@ -5,7 +5,7 @@ import RaisedButton from 'material-ui/RaisedButton';
 class HardList extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {  hsUrl: 'logosm2.png', link: '', hoverClass: 'image-spin', btnLabel: 'no spin'}
+    this.state = {  hsUrl: 'logosm.png', link: '', hoverClass: 'image-spin', btnLabel: 'no spin'}
   }
   setHoverClass(){
     if (this.state.hoverClass === 'image-spin') {
@@ -82,8 +82,8 @@ class HardList extends React.Component {
     return (
       <div className='hs-container box-shadow flex-it'>
         <div>
-          <h2>Hard Skills</h2>
-           <RaisedButton label={this.state.btnLabel} onTouchTap={()=>this.setHoverClass()} />
+          <h2 onTouchTap={ ()=>this.setState({ hsUrl: 'logosm.png'}) }>Hard Skills</h2>
+          <RaisedButton primary={true} className='btn-raised' label={this.state.btnLabel} onTouchTap={()=>this.setHoverClass()} />
           <ul className='hs-ul'>
             {
               hardskills.map ((item, i) => {

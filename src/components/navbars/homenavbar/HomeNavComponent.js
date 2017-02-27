@@ -4,7 +4,6 @@ import MyAppBar from '../MyAppBar';
 
 import Drawer   from 'material-ui/Drawer';
 import MenuItem from 'material-ui/MenuItem';
-import Paper    from 'material-ui/Paper';
 
 import './HomeNav.css';
 
@@ -65,7 +64,7 @@ class HomeNavComponent extends React.Component {
         yourFortune = 'Yesterday is history. Tomorrow is a mystery, but today is a gift! that is why we call it the present.';
         break;
       default:
-        yourFortune = 'What is your fotune today?'
+        yourFortune = 'What is your fortune today?'
     }
 
     this.setState({ fortune: yourFortune });
@@ -82,7 +81,7 @@ class HomeNavComponent extends React.Component {
           <MyAppBar
             title={this.state.greeting}
             className='home-nav'
-            style={{backgroundColor: 'rgba(94, 184, 204, 1)' }} onLeftIconButtonTouchTap={()=>this.handleLeftTouchTap()}
+            style={{backgroundColor: '#41969c'}} onLeftIconButtonTouchTap={()=>this.handleLeftTouchTap()}
             iconElementRight={
               <img
                 onTouchTap={()=>this.handleImgTouchTap()}
@@ -92,7 +91,6 @@ class HomeNavComponent extends React.Component {
               />
             }
           />
-        <Paper className='slideDown fortune' zDepth={2} style={{fontSize: 12, padding: 5 }}>{this.state.fortune}</Paper>
           <Drawer
             docked={false}
             width={300}
@@ -117,6 +115,7 @@ class HomeNavComponent extends React.Component {
               </Link>
           </Drawer>
         </div>
+        <div className={'slideDown fortune'}>{this.state.fortune}</div>
       </header>
     );
   }

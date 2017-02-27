@@ -6,7 +6,7 @@ a:active {
 }
 
 .image-spin{
-  animation: spin infinite 10s linear;
+  animation: spin 2 10s linear;
 }
 
 @keyframes spin {
@@ -22,6 +22,10 @@ a:active {
 .float {
   flex-direction: column;
   align-items: center;
+}
+
+.btn-raised {
+  color: #41969c;
 }
 
 /**********************************
@@ -121,7 +125,7 @@ strong {
     margin-left: 2.5px;
     margin-right: 0;
     text-align: right;
-    background-color: orange;
+    background-color: white;
     flex-direction: row-reverse;
     justify-content: flex-start;
   }
@@ -131,7 +135,7 @@ strong {
     margin-left: 0;
     margin-right: 2.5px;
     text-align: left;
-    background-color: orange;
+    background-color: white;
     flex-direction: row;
     justify-content: flex-start;
   }

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router';
 
 import RaisedButton from 'material-ui/RaisedButton';
 
@@ -48,7 +49,7 @@ class SoftList extends React.Component {
       },
       {
         name : 'Fast Learner',
-        ssUrl: 'fastlearner.gif'
+        ssUrl: 'fastlearner2.gif'
 
       },
       {
@@ -64,8 +65,7 @@ class SoftList extends React.Component {
     return (
       <div className='ss-container box-shadow flex-it'>
         <div>
-          <h2>Soft Skills</h2>
-
+          <h2 onTouchTap={ ()=>this.setState({ssUrl: 'diet.jpg'}) }>Soft Skills</h2>
           <ul className='ss-ul'>
             {
               softskills.map ((item, i) => {
@@ -76,7 +76,9 @@ class SoftList extends React.Component {
               })
             }
           </ul>
-          <RaisedButton label='learn more' />
+          <Link to='/resume'>
+              <RaisedButton primary={true} label='learn more' />
+          </Link>
           <p className='ss-stronger'>working
             <br />
             to be

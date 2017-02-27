@@ -2,6 +2,7 @@
 Flexbox
 ***********************************/
 .landing-message {
+  margin-top: 25px;
   color: white;
 }
 
@@ -18,23 +19,46 @@ Media Queries
   justify-content: center;
   align-items: center;
 }
+
+.img-cloud {
+  background: url('../../../../assets/thought-lg.png') center no-repeat;
+  background-size: contain;
+  width: 100%;
+  height: 50vh;
+  min-width: 300px;
+
+}
+
+.anim {
+  animation-name: cloudFloat;
+  -webkit-animation-name: cloudFloat;
+
+  animation-duration: 5s;
+  -webkit-animation-duration: 5s;
+
+  animation-iteration-count: infinite;
+  -webkit-animation-interation-count: infinite;
+}
 /**********
 Mobile
 ***********/
-@media only screen and (min-width: 480px) {
-
-}
 /**********
 Tablet
 ***********/
 @media only screen and (min-width: 768px) {
+  .img-cloud {
+    height: 55vh;
+    margin-bottom: 0px;
+  }
 }
 
 /**********
 Desktop
 ***********/
 @media only screen and (min-width: 1024px) {
-
+  .img-cloud {
+    height: 60vh;
+  }
 }
 
 
@@ -75,4 +99,16 @@ Keyframes
     opacity: 1;
 		-webkit-transform: translateY(0%);
 	}
+}
+
+@keyframes cloudFloat {
+  0% {
+      transform: rotate(0deg) translateX(5px) rotate(0deg);
+  }
+  50% {
+      transform: rotate(180deg) translateX(5px) rotate(-180deg);
+  }
+  100% {
+      transform: rotate(0deg) translateX(5px) rotate(0deg);
+  }
 }

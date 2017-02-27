@@ -1,11 +1,25 @@
 .quote-main-section {
   background-color: #41969c;
+  color: white;
+  height: 300px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.quote {
+  font-family: times;
+  font-size: 2em;
+  margin: 0.5em;
+  padding: 1em;
+}
+
+.quote-author{
+  margin-bottom: 30px;
+  font-size: 0.75em;
 }
 
 @media only screen and (min-width: 768px) {
-  .quote-main-section {
-    background-color: white;
-  }
 }
 
 @media only screen and (min-width: 1024px) {

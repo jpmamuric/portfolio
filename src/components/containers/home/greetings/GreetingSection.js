@@ -5,7 +5,7 @@ import './GreetingSection.css';
 class GreetingSection extends React.Component {
   render() {
     return (
-      <section>
+      <section className='greeting-section box-shadow'>
         <div className='greetings-main-container flex-it'>
           <div className='greetings-text-container flex-it'>
             <div className='greetings-text'>
@@ -21,7 +21,7 @@ class GreetingSection extends React.Component {
           </div>
           <img className='greetings-img' alt='jp greetings' src={require('../../../../assets/about2.png')}/>
         </div>
-      </section>  
+      </section>
     );
   }
 }
