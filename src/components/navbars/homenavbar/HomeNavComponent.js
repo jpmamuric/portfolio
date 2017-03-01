@@ -1,7 +1,7 @@
 import React    from 'react';
 import { Link } from 'react-router';
-import MyAppBar from '../MyAppBar';
 
+import MyAppBar from '../MyAppBar';
 import Drawer   from 'material-ui/Drawer';
 import MenuItem from 'material-ui/MenuItem';
 
@@ -16,6 +16,7 @@ class HomeNavComponent extends React.Component {
       fortune: 'What is your fortune?',
       time: null
     };
+    this.handleClose = this.handleClose.bind(this);
   };
 
   componentWillMount() {
@@ -76,7 +77,7 @@ class HomeNavComponent extends React.Component {
 
   render() {
     return (
-      <header>
+      <header id='header'>
         <div>
           <MyAppBar
             title={this.state.greeting}
@@ -102,16 +103,13 @@ class HomeNavComponent extends React.Component {
                 alt='jp mamuric'
                 />
               <Link to='/'>
-                <MenuItem onTouchTap={this.handleClose.bind(this)}>Home
-                </MenuItem>
+                <MenuItem onTouchTap={this.handleClose}>Home</MenuItem>
               </Link>
               <Link  to='/resume'>
-                <MenuItem onTouchTap={this.handleClose.bind(this)}>Resume
-                </MenuItem>
+                <MenuItem onTouchTap={this.handleClose}>Resume</MenuItem>
               </Link>
               <Link  to='/contact'>
-                <MenuItem onTouchTap={this.handleClose.bind(this)}>Contact
-                </MenuItem>
+                <MenuItem onTouchTap={this.handleClose}>Contact</MenuItem>
               </Link>
           </Drawer>
         </div>

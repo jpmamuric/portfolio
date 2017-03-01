@@ -1,7 +1,7 @@
 import React from 'react';
 import AppBar from 'material-ui/AppBar';
 
-const MyAppBar = ({onLeftIconButtonTouchTap, title, style,iconClassNameRight, iconElementRight, className }) => {
+const MyAppBar = ({onLeftIconButtonTouchTap, title, style,iconClassNameRight, iconElementRight,iconElementLeft, className }) => {
   return (
     <div>
       <AppBar

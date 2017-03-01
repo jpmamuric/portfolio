@@ -5,7 +5,7 @@ import RaisedButton from 'material-ui/RaisedButton';
 class HardList extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {  hsUrl: 'logosm.png', link: '', hoverClass: 'image-spin', btnLabel: 'no spin'}
+    this.state = {  hsUrl: 'logosm.png', link: '#skill-section', hoverClass: 'image-spin', btnLabel: 'no spin'}
   }
   setHoverClass(){
     if (this.state.hoverClass === 'image-spin') {
@@ -20,7 +20,7 @@ class HardList extends React.Component {
       {
         name : 'CSS3 & HTML5',
         hsUrl: 'css.gif',
-        link: ''
+        link: '#skill-section'
       },
       {
         name : 'React',
@@ -83,7 +83,6 @@ class HardList extends React.Component {
       <div className='hs-container box-shadow flex-it'>
         <div>
           <h2 onTouchTap={ ()=>this.setState({ hsUrl: 'logosm.png'}) }>Hard Skills</h2>
-          <RaisedButton primary={true} className='btn-raised' label={this.state.btnLabel} onTouchTap={()=>this.setHoverClass()} />
           <ul className='hs-ul'>
             {
               hardskills.map ((item, i) => {
@@ -91,7 +90,7 @@ class HardList extends React.Component {
                   <li
                     key={i}
                     className='hs-li'
-                    onTouchTap={()=>this.setState({hsUrl: item.hsUrl, link: item.link})}
+                    onTouchTap={()=> this.setState({hsUrl: item.hsUrl, link: item.link, }) }
                     >
                       {item.name}
                   </li>
@@ -99,6 +98,7 @@ class HardList extends React.Component {
               })
             }
           </ul>
+            <RaisedButton primary={true} className='btn-raised' label={this.state.btnLabel} onTouchTap={()=>this.setHoverClass()} />
           <p className='hs-greater'>working
             <br />
             to be
@@ -111,6 +111,7 @@ class HardList extends React.Component {
           >
           <img className={`hs-img  ${this.state.hoverClass}`} alt='website logo' src={require(`../../../../assets/skills/${this.state.hsUrl}`)}/>
         </a>
+
       </div>
     );
   }

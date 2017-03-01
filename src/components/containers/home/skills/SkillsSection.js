@@ -3,28 +3,21 @@ import React from 'react';
 import './SkillsSection.css';
 import SoftList   from './softlist';
 import HardList   from './hardlist';
+// import NewList    from './newdesign';
 
-class SkillsSection extends React.Component {
-  constructor(props){
-    super(props);
-    this.state = {
-      ssURl: 'diet.jpg'
-    };
-  }
+const SkillsSection = () => {
+  return (
+    <section id='skill-section'>
+      <div className='skills-main-container flex-it'>
+        <HardList />
+        <SoftList />
+      </div>
+    </section>
+  );
 
-  render() {
-    //Hard Coded, but can use API's here
-
-
-    return (
-      <section>
-        <div className='skills-main-container flex-it'>
-          <HardList />
-          <SoftList />
-        </div>
-      </section>
-    );
-  }
 }
+
+
+
 
 export default SkillsSection;
