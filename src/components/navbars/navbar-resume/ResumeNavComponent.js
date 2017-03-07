@@ -46,10 +46,6 @@ class ResumeNavComponent extends React.Component {
               <MenuItem onTouchTap={this.handleClose}>Resume
               </MenuItem>
             </Link>
-            <Link  to='/contact'>
-              <MenuItem onTouchTap={this.handleClose}>Contact
-              </MenuItem>
-            </Link>
             </Drawer>
         </div>
       </header>
