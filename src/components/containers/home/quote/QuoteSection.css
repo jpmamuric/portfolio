@@ -1,10 +1,11 @@
 .quote-main-section {
   background-color: #41969c;
   color: white;
-  height: 300px;
+  height: 450px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: 10px;
 }
 
 .quote {

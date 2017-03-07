@@ -5,6 +5,8 @@ import MyAppBar from '../MyAppBar';
 import Drawer   from 'material-ui/Drawer';
 import MenuItem from 'material-ui/MenuItem';
 
+import github   from '../../../assets/social-media/github.png';
+import twitter  from '../../../assets/social-media/twitter.png';
 import './HomeNav.css';
 
 class HomeNavComponent extends React.Component {
@@ -82,7 +84,7 @@ class HomeNavComponent extends React.Component {
           <MyAppBar
             title={this.state.greeting}
             className='home-nav'
-            style={{backgroundColor: '#41969c'}} onLeftIconButtonTouchTap={()=>this.handleLeftTouchTap()}
+            style={{backgroundColor: '#41969c' }} onLeftIconButtonTouchTap={()=>this.handleLeftTouchTap()}
             iconElementRight={
               <img
                 onTouchTap={()=>this.handleImgTouchTap()}
@@ -108,9 +110,14 @@ class HomeNavComponent extends React.Component {
               <Link  to='/resume'>
                 <MenuItem onTouchTap={this.handleClose}>Resume</MenuItem>
               </Link>
-              <Link  to='/contact'>
-                <MenuItem onTouchTap={this.handleClose}>Contact</MenuItem>
-              </Link>
+              <div className='social'>
+                <a href='https://github.com/jpmamuric'>
+                  <img className='facebook' src={github} alt='github icon'/>
+                </a>
+                <a href='https://twitter.com/jpmamuric'>
+                  <img className='facebook' src={twitter} alt='twitter icon'/>
+                </a>
+              </div>
           </Drawer>
         </div>
         <div className={'slideDown fortune'}>{this.state.fortune}</div>

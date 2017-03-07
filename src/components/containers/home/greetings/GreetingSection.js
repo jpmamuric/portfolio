@@ -1,7 +1,5 @@
 import React from 'react';
-import jump  from 'jump.js'
 
-import FloatingActionButton from 'material-ui/FloatingActionButton';
 import './GreetingSection.css';
 
 class GreetingSection extends React.Component {
@@ -16,13 +14,11 @@ class GreetingSection extends React.Component {
               <span className='g3'>JP </span>
               <span className='g4'>(short for Jan Peter)</span>
               <span className='g5'>Mamuric</span>
-              <span className='g6'>and I'm a  </span>
+              <span className=''>and I'm a  </span>
               <span className='g7'>javascript developer</span>
+              <span className='g6'>I love to build things</span>
               <span className='g8'>Nice to meet you!</span>
             </div>
-            <FloatingActionButton onTouchTap={()=>jump('#skill-section')} className='btn-float'>
-              <img src={require('../../../../assets/arrow.png')} alt='down arrow' className='arrow'/>
-            </FloatingActionButton>
           </div>
           <img className='greetings-img' alt='jp greetings' src={require('../../../../assets/about2.png')}/>
         </div>

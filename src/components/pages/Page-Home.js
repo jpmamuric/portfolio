@@ -1,20 +1,24 @@
 import React from 'react';
 
-import HomeNavComponent from '../navbars/homenavbar/HomeNavComponent';
+import HeroSection      from '../containers/home/hero/HeroSection';
 import GreetingSection  from '../containers/home/greetings/GreetingSection';
 import SkillsSection    from '../containers/home/skills/SkillsSection';
+import ProjectSection   from '../containers/home/projects/ProjectSection';
 import QuoteSection     from '../containers/home/quote/QuoteSection';
+import Footer           from  '../common/footer/Footer';
 
-import './pages.css';
+import './Page.css';
 
 const Home = () => {
 
   return (
     <div>
-      <HomeNavComponent />
+      <HeroSection />
       <GreetingSection />
       <SkillsSection />
+      <ProjectSection />
       <QuoteSection />
+      <Footer />
     </div>
   );
 }

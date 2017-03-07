@@ -1,8 +1,14 @@
+
+/************
+APPBAR EXTRAS
+************/
+
 .fortune {
   letter-spacing: 1px;
   font-size: 18px;
   padding: 10px;
   text-align: right;
+  color: white;
 }
 
 .home-icon {
@@ -14,8 +20,23 @@
 
 .logo {
   width: 280px;
-
 }
+
+.facebook {
+  width: 30px;
+  height: 30px;
+  padding: 5px;
+}
+
+.linkedIn {
+  width: 35px;
+  height: 30px;
+  padding: 5px;
+}
+
+/************
+KEYFRAMES
+************/
 
 .slideDown{
 	animation-name: slideDown;

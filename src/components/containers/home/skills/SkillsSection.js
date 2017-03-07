@@ -1,8 +1,8 @@
 import React from 'react';
 
 import './SkillsSection.css';
-import SoftList   from './softlist';
-import HardList   from './hardlist';
+import SoftList   from './list-softskills';
+import HardList   from './list-hardskills';
 // import NewList    from './newdesign';
 
 const SkillsSection = () => {

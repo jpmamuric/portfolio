@@ -1,21 +1,16 @@
 import React from 'react';
 
-import Card               from '../common/card/Card';
-import ResumeNavComponent from '../navbars/resumenavbar/ResumeNavComponent'
-import './pages.css';
+import ResumeNavComponent from '../navbars/navbar-resume/ResumeNavComponent'
+import Resume             from '../containers/resume/Resume';
+import './Page.css';
 
-const Resume = () => {
+const ResumePage = () => {
   return (
     <div >
       <ResumeNavComponent />
-      <div>Resume Page</div>
-      <section className='slideUp'>
-        <Card >
-          Resume 
-        </Card>
-      </section>
+        <Resume /> 
     </div>
   );
 }
 
-export default Resume;
+export default ResumePage;

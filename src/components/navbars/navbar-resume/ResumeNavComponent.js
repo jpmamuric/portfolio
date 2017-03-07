@@ -11,6 +11,8 @@ class ResumeNavComponent extends React.Component {
     this.state = {
       open: false
     };
+
+    this.handleClose = this.handleClose.bind(this);
   };
 
   handleTouchTap() {
@@ -37,15 +39,15 @@ class ResumeNavComponent extends React.Component {
               style={{ width: 280 }} src={require('../../../assets/logo2.png')}
               alt='jp mamuric'/>
             <Link to='/'>
-              <MenuItem onTouchTap={this.handleClose.bind(this)}>Home
+              <MenuItem onTouchTap={this.handleClose}>Home
               </MenuItem>
             </Link>
             <Link  to='/resume'>
-              <MenuItem onTouchTap={this.handleClose.bind(this)}>Resume
+              <MenuItem onTouchTap={this.handleClose}>Resume
               </MenuItem>
             </Link>
             <Link  to='/contact'>
-              <MenuItem onTouchTap={this.handleClose.bind(this)}>Contact
+              <MenuItem onTouchTap={this.handleClose}>Contact
               </MenuItem>
             </Link>
             </Drawer>

@@ -5,7 +5,12 @@ import RaisedButton from 'material-ui/RaisedButton';
 class HardList extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {  hsUrl: 'logosm.png', link: '#skill-section', hoverClass: 'image-spin', btnLabel: 'no spin'}
+    this.state = {
+      hsUrl: 'logosm.png',
+      link: '#skill-section',
+      hoverClass: 'image-spin',
+      btnLabel: 'no spin'
+    }
   }
   setHoverClass(){
     if (this.state.hoverClass === 'image-spin') {
@@ -38,9 +43,9 @@ class HardList extends React.Component {
         link: 'https://angularjs.org/'
       },
       {
-        name : 'Wordpress',
-        hsUrl: 'wordpress.png',
-        link: 'https://wordpress.org/'
+        name : 'Firebase',
+        hsUrl: 'firebase.png',
+        link: 'https://firebase.google.com/'
       },
       {
         name : 'Node.js',
@@ -82,7 +87,8 @@ class HardList extends React.Component {
     return (
       <div className='hs-container box-shadow flex-it'>
         <div>
-          <h2 onTouchTap={ ()=>this.setState({ hsUrl: 'logosm.png'}) }>Hard Skills</h2>
+          <h2 onTouchTap={ ()=>this.setState({ hsUrl: 'logosm.png', }) }>Hard Skills
+          </h2>
           <ul className='hs-ul'>
             {
               hardskills.map ((item, i) => {
@@ -98,7 +104,8 @@ class HardList extends React.Component {
               })
             }
           </ul>
-            <RaisedButton primary={true} className='btn-raised' label={this.state.btnLabel} onTouchTap={()=>this.setHoverClass()} />
+
+          <RaisedButton primary={true} className='btn-raised' label={this.state.btnLabel} onTouchTap={()=>this.setHoverClass()} />
           <p className='hs-greater'>working
             <br />
             to be
@@ -111,6 +118,7 @@ class HardList extends React.Component {
           >
           <img className={`hs-img  ${this.state.hoverClass}`} alt='website logo' src={require(`../../../../assets/skills/${this.state.hsUrl}`)}/>
         </a>
+
 
       </div>
     );
